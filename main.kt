@@ -17,7 +17,7 @@ fun getUserChoice(optionsParam: Array<String>): String {
         print("Please select any of the following")
         for (item in optionsParam) print( " $item")
         println(".")
-        var userInput = readLine()
+        var userInput = readLine()?.toUpperCase()
 
         if (userInput != null && userInput in optionsParam) {
             isValidChoice = true
